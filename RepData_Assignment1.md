@@ -1,5 +1,5 @@
 # Reproducible Research: Assignment 1
-###Loading and Preprocessing the Data
+**Loading and Preprocessing the Data**
 
 
 ```r
@@ -7,7 +7,7 @@ unzip("activity.zip")
 data <- read.csv("activity.csv")
 ```
 
-###What is the mean total number of steps taken per day?
+**What is the mean total number of steps taken per day?**
 
 Histogram of the total number of steps taken each day, calculated using "tapply":
 
@@ -31,7 +31,7 @@ summary(activity_day)
 ##       0    6778   10400    9354   12810   21190
 ```
 
-###What is the average daily activity pattern?
+**What is the average daily activity pattern?**
 
 Time series plot of the 5-minute interval and average number of steps taken, averaged across all days:
 
@@ -55,7 +55,7 @@ head(sort(activity_interval,decreasing=TRUE))
 ## 206.1698 195.9245 183.3962 179.5660 177.3019 171.1509
 ```
 
-###Inputting missing values
+**Inputting missing values**
 
 There are 2,304 missing values in the dataset:
 
@@ -95,7 +95,7 @@ summary(activity_day2)
 ##      41    9819   10770   10770   12810   21190
 ```
 
-###Are there differences in activity patterns between weekdays and weekends?
+**Are there differences in activity patterns between weekdays and weekends?**
 
 A new factor variable with two levels – “weekday” and “weekend” indicate whether a given date is a weekday or weekend day:
 

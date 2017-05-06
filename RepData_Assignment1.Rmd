@@ -4,14 +4,14 @@ output:
   html_document: 
     keep_md: yes
 ---
-###Loading and Preprocessing the Data
+**Loading and Preprocessing the Data**
 
 ```{r}
 unzip("activity.zip")
 data <- read.csv("activity.csv")
 ```
 
-###What is the mean total number of steps taken per day?
+**What is the mean total number of steps taken per day?**
 
 Histogram of the total number of steps taken each day, calculated using "tapply":
 
@@ -26,7 +26,7 @@ The mean steps taken per day is 9,354, and the median number of steps is 10,400:
 summary(activity_day)
 ```
 
-###What is the average daily activity pattern?
+**What is the average daily activity pattern?**
 
 Time series plot of the 5-minute interval and average number of steps taken, averaged across all days:
 
@@ -41,7 +41,7 @@ The 5-minute interval that contains the maximum number of steps is the 835th int
 head(sort(activity_interval,decreasing=TRUE))
 ```
 
-###Inputting missing values
+**Inputting missing values**
 
 There are 2,304 missing values in the dataset:
 ```{r}
@@ -66,7 +66,7 @@ The mean and median steps taken per day is now 10,770. Inserting missing data us
 summary(activity_day2)
 ```
 
-###Are there differences in activity patterns between weekdays and weekends?
+**Are there differences in activity patterns between weekdays and weekends?**
 
 A new factor variable with two levels – “weekday” and “weekend” indicate whether a given date is a weekday or weekend day:
 
